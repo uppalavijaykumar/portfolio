@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vijay Kumar | Full Stack Developer &amp; AI Automation Specialist</title>
+  <meta name="description" content="Portfolio of Vijay Kumar - Full Stack Developer and AI Automation enthusiast building digital solutions, AI voice agents, and scalable web apps.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Devicon for Tech Stack Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100">
+
+  <!-- Toast Notification Container -->
+  <div class="position-fixed top-0 end-0 p-3" style="z-index: 11000;" id="toastContainer"></div>
+
+  <!-- Audio Element for Interactive Voice Project Sample -->
+  <audio id="voiceAudio" src="assets/audio/ai-voice-sample.wav" preload="auto"></audio>
+
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <span class="brand-icon">&lt;/&gt;</span>
+        <span class="fw-bold">Vijay Kumar</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list text-white fs-2"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <a href="#contact" class="btn btn-primary-neon py-2 px-4 text-nowrap" data-bs-toggle="modal" data-bs-target="#hireModal">
+            Hire Me <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <!-- Hero Text & CTA -->
+        <div class="col-lg-7">
+          <div class="badge-tag mb-3">
+            <span class="pulse-dot"></span>
+            FULL STACK DEVELOPER | AI AUTOMATION ENTHUSIAST
+          </div>
+          <h1 class="hero-title">
+            Hi, I’m <span class="gradient-text">Vijay Kumar</span><br>
+            <span id="typedText" class="gradient-cyan">I build digital solutions</span>
+          </h1>
+          <p class="hero-subtitle">
+            I’m a passionate Full Stack Developer and AI Automation enthusiast with hands-on experience in building modern web applications, automation workflows, and AI-powered solutions.
+          </p>
+
+          <!-- Single View Projects Action -->
+          <div class="mb-5">
+            <a href="#projects" class="btn btn-primary-neon">
+              View My Projects <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Technologies Strip -->
+          <div class="tech-strip">
+            <div class="tech-strip-title">Technologies I Work With</div>
+            <div class="tech-icons-row">
+              <div class="tech-icon-badge" title="Python"><i class="devicon-python-plain colored"></i></div>
+              <div class="tech-icon-badge" title="JavaScript"><i class="devicon-javascript-plain colored"></i></div>
+              <div class="tech-icon-badge" title="React.js"><i class="devicon-react-original colored"></i></div>
+              <div class="tech-icon-badge" title="HTML5"><i class="devicon-html5-plain colored"></i></div>
+              <div class="tech-icon-badge" title="CSS3"><i class="devicon-css3-plain colored"></i></div>
+              <div class="tech-icon-badge" title="Bootstrap 5"><i class="devicon-bootstrap-plain colored"></i></div>
+              <div class="tech-icon-badge" title="Node.js"><i class="devicon-nodejs-plain colored"></i></div>
+              <div class="tech-icon-badge" title="Git"><i class="devicon-git-plain colored"></i></div>
+              <div class="tech-icon-badge" title="GitHub"><i class="devicon-github-original"></i></div>
+              <div class="tech-icon-badge" title="Cloud / Docker"><i class="devicon-docker-plain colored"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right: Avatar & Floating Terminal Card -->
+        <div class="col-lg-5">
+          <div class="hero-visual-wrapper">
+            <div class="avatar-glow-ring">
+              <img src="assets/img/profile.jpg" alt="Vijay Kumar" class="avatar-img">
+            </div>
+
+            <!-- Floating Code Terminal -->
+            <div class="code-snippet-card">
+              <div class="code-header">
+                <div class="code-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="code-title">&lt;/&gt; Code</div>
+                <button class="code-copy-btn" id="copyCodeBtn" title="Copy snippet">
+                  <i class="bi bi-clipboard"></i>
+                </button>
+              </div>
+              <div class="code-body">
+                <div><span class="code-kw">const</span> <span class="code-var">developer</span> = {</div>
+                <div class="ps-3"><span class="code-prop">name:</span> <span class="code-str">'Vijay Kumar'</span>,</div>
+                <div class="ps-3"><span class="code-prop">role:</span> <span class="code-str">'Full Stack Developer'</span>,</div>
+                <div class="ps-3"><span class="code-prop">passion:</span> <span class="code-str">'AI &amp; Automation'</span>,</div>
+                <div class="ps-3"><span class="code-prop">build:</span> <span class="code-str">'Digital Solutions'</span></div>
+                <div>};</div>
+                <div class="mt-1"><span class="code-fn">console</span>.log(<span class="code-str">"Let's build the future"</span>);</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       About Me Section
+       ========================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <!-- About Left Description -->
+        <div class="col-lg-6">
+          <div class="badge-tag mb-3">ABOUT ME</div>
+          <h2 class="about-heading">
+            I’m passionate about <span class="gradient-text">building useful</span> and scalable web applications
+          </h2>
+          <p class="about-text">
+            With a strong interest in Python, AI automation, and full-stack development, I enjoy turning ideas into real-world solutions. I’m always eager to learn new technologies and work on projects that create high value.
+          </p>
+
+          <ul class="about-features">
+            <li>
+              <i class="bi bi-mortarboard-fill"></i>
+              <span><strong>Degree:</strong> B.Tech in Computer Science &amp; Systems Engineering</span>
+            </li>
+            <li>
+              <i class="bi bi-check2-circle"></i>
+              <span><strong>Status:</strong> Passed Out Graduate &amp; Ready for Immediate Onboarding</span>
+            </li>
+            <li>
+              <i class="bi bi-lightning-charge-fill"></i>
+              <span><strong>Focus:</strong> Modern React Apps, Python Backend, &amp; n8n AI Automation</span>
+            </li>
+          </ul>
+
+          <div class="pt-2">
+            <a href="#skills" class="btn btn-glass">
+              Learn More About Me <i class="bi bi-arrow-down-short fs-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- About Right Stat Cards (2x2 Grid) -->
+        <div class="col-lg-6">
+          <div class="row g-4">
+            <!-- Stat 1: Passed Out (Replacing Experience as requested) -->
+            <div class="col-sm-6">
+              <div class="glass-card stat-card">
+                <div class="stat-icon-box">
+                  <i class="bi bi-mortarboard-fill"></i>
+                </div>
+                <div>
+                  <div class="stat-value">2025</div>
+                  <div class="stat-label">Passed Out (B.Tech)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 2: Projects Completed -->
+            <div class="col-sm-6">
+              <div class="glass-card stat-card">
+                <div class="stat-icon-box icon-blue">
+                  <i class="bi bi-code-slash"></i>
+                </div>
+                <div>
+                  <div class="stat-value">10+</div>
+                  <div class="stat-label">Projects Completed</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 3: Work Ethic -->
+            <div class="col-sm-6">
+              <div class="glass-card stat-card">
+                <div class="stat-icon-box icon-green">
+                  <i class="bi bi-emoji-smile-fill"></i>
+                </div>
+                <div>
+                  <div class="stat-value">Happy</div>
+                  <div class="stat-label">To Work &amp; Learn</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 4: Dedication & Satisfaction -->
+            <div class="col-sm-6">
+              <div class="glass-card stat-card">
+                <div class="stat-icon-box icon-amber">
+                  <i class="bi bi-trophy-fill"></i>
+                </div>
+                <div>
+                  <div class="stat-value">100%</div>
+                  <div class="stat-label">Client Satisfaction</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Featured Projects Section
+       ========================================================================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag mb-2">FEATURED PROJECTS</div>
+        <h2 class="section-title">My Recent Work</h2>
+      </div>
+
+      <!-- Project Filter Tabs -->
+      <div class="project-filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="ai">AI &amp; Automation</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="row g-4">
+        <!-- Project 1: ATS Resume Screening Automation -->
+        <div class="col-lg-4 col-md-6 project-item" data-category="ai">
+          <div class="glass-card project-card">
+            <div class="project-img-wrapper">
+              <img src="assets/img/project-ats.png" alt="ATS Resume Screening Automation" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-primary-neon btn-sm" data-project-target="ats">
+                  Quick View <i class="bi bi-eye"></i>
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">ATS Resume Screening Automation</h3>
+              <p class="project-desc">
+                Automated resume screening workflow using n8n with AI. Extracts data, calculates ATS score, stores in Google Sheets and sends email notifications.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">n8n</span>
+                <span class="project-tag">Google Sheets</span>
+                <span class="project-tag">AI</span>
+                <span class="project-tag">Automation</span>
+              </div>
+              <div class="project-footer">
+                <div class="text-purple fs-5"><i class="bi bi-diagram-3-fill"></i></div>
+                <button class="project-action-link" data-project-target="ats">
+                  View Project <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: AI Voice Agent -->
+        <div class="col-lg-4 col-md-6 project-item" data-category="ai">
+          <div class="glass-card project-card">
+            <div class="project-img-wrapper">
+              <img src="assets/img/project-voice.png" alt="AI Voice Agent" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-primary-neon btn-sm" data-project-target="voice">
+                  Quick View <i class="bi bi-eye"></i>
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">AI Voice Agent</h3>
+              <p class="project-desc">
+                Built an AI voice agent using ElevenLabs for customer support and tutoring. Integrated with n8n for workflow automation and multi-model AI.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">ElevenLabs</span>
+                <span class="project-tag">n8n</span>
+                <span class="project-tag">AI Voice</span>
+                <span class="project-tag">Automation</span>
+              </div>
+              <div class="project-footer">
+                <button id="playVoiceBtn" class="voice-audio-pill" title="Play Voice Sample">
+                  <i class="bi bi-mic-fill"></i> Listen AI Voice
+                </button>
+                <button class="project-action-link" data-project-target="voice">
+                  View Project <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: VK Store - E-Commerce Website (Direct Vercel Redirection) -->
+        <div class="col-lg-4 col-md-6 project-item" data-category="web">
+          <div class="glass-card project-card">
+            <div class="project-img-wrapper">
+              <a href="https://vk-store-chi.vercel.app/" target="_blank" rel="noopener noreferrer" class="d-block w-100 h-100">
+                <img src="assets/img/project-vkstore.png" alt="VK Store E-Commerce" class="project-img">
+              </a>
+              <div class="project-overlay">
+                <a href="https://vk-store-chi.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-neon btn-sm">
+                  Visit Live Site <i class="bi bi-box-arrow-up-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">
+                <a href="https://vk-store-chi.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
+                  VK Store - E-Commerce Website
+                </a>
+              </h3>
+              <p class="project-desc">
+                A modern and responsive e-commerce website with product listing, cart, and smooth shopping experience. Built with React and modern UI.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+              </div>
+              <div class="project-footer">
+                <div class="text-purple fs-5"><i class="bi bi-cart3"></i></div>
+                <a href="https://vk-store-chi.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                  View Project <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Skills Section
+       ========================================================================== -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag mb-2">MY SKILLS</div>
+        <h2 class="section-title">Technologies I Master</h2>
+      </div>
+
+      <div class="row g-4">
+        <!-- Column 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card skill-category-card">
+            <!-- Python -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-python-plain colored fs-5"></i> Python</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar" data-width="90%"></div>
+              </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-javascript-plain colored fs-5"></i> JavaScript</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar" data-width="90%"></div>
+              </div>
+            </div>
+
+            <!-- HTML -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-html5-plain colored fs-5"></i> HTML</span>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar" data-width="95%"></div>
+              </div>
+            </div>
+
+            <!-- CSS -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-css3-plain colored fs-5"></i> CSS</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar" data-width="90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card skill-category-card">
+            <!-- React.js -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-react-original colored fs-5"></i> React.js</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar cyan" data-width="85%"></div>
+              </div>
+            </div>
+
+            <!-- Node.js -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-nodejs-plain colored fs-5"></i> Node.js</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar cyan" data-width="80%"></div>
+              </div>
+            </div>
+
+            <!-- SQL -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-mysql-plain colored fs-5"></i> SQL / DB</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar cyan" data-width="85%"></div>
+              </div>
+            </div>
+
+            <!-- Git -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-git-plain colored fs-5"></i> Git</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar cyan" data-width="80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-lg-4 col-md-12">
+          <div class="glass-card skill-category-card">
+            <!-- n8n -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-diagram-3-fill text-purple fs-5"></i> n8n Workflows</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar" data-width="85%"></div>
+              </div>
+            </div>
+
+            <!-- Docker -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-docker-plain colored fs-5"></i> Docker</span>
+                <span class="skill-percent">75%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar" data-width="75%"></div>
+              </div>
+            </div>
+
+            <!-- MongoDB -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="devicon-mongodb-plain colored fs-5"></i> MongoDB</span>
+                <span class="skill-percent">70%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar" data-width="70%"></div>
+              </div>
+            </div>
+
+            <!-- AI & LLMs -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-cpu-fill text-info fs-5"></i> AI &amp; LLMs</span>
+                <span class="skill-percent">75%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Frameworks & Tools Badges -->
+      <div class="tools-tags-container">
+        <span class="tool-badge"><i class="devicon-bootstrap-plain colored"></i> Bootstrap 5</span>
+        <span class="tool-badge"><i class="devicon-vite-original colored"></i> Vite</span>
+        <span class="tool-badge"><i class="devicon-express-original"></i> Express.js</span>
+        <span class="tool-badge"><i class="devicon-fastapi-plain colored"></i> RESTful APIs</span>
+        <span class="tool-badge"><i class="bi bi-mic text-info"></i> ElevenLabs AI</span>
+        <span class="tool-badge"><i class="devicon-postman-plain colored"></i> Postman</span>
+        <span class="tool-badge"><i class="devicon-linux-plain"></i> Linux CLI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Contact & CTA Section
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Card 1: Have a project in mind? -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card contact-card">
+            <div class="badge-tag mb-3" style="width: fit-content;">LET'S WORK TOGETHER</div>
+            <h3 class="contact-heading">Have a project in mind?</h3>
+            <p class="contact-text">
+              I’m always open to discussing new projects, internships, and full-time software engineering roles. Let’s create something amazing together!
+            </p>
+            <div class="mt-auto">
+              <button class="btn btn-primary-neon w-100 justify-content-center" data-bs-toggle="modal" data-bs-target="#hireModal">
+                Get In Touch <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Philosophy / Testimonial Quote -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card contact-card">
+            <div class="quote-icon"><i class="bi bi-quote"></i></div>
+            <p class="quote-text">
+              "A dedicated and skilled developer with a strong passion for building innovative solutions. Great problem-solving skills and always eager to learn new technologies."
+            </p>
+            <div class="quote-author mt-auto">
+              <img src="assets/img/avatar.jpg" alt="Vijay Kumar" class="quote-avatar">
+              <div>
+                <div class="author-name">Vijay Kumar</div>
+                <div class="author-role">Full Stack Developer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Follow Me & Direct Contact Info -->
+        <div class="col-lg-4 col-md-12">
+          <div class="glass-card contact-card">
+            <h4 class="fw-bold mb-3">Follow Me</h4>
+            <div class="social-icons-list">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="X / Twitter">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </div>
+
+            <div class="contact-info-list">
+              <div class="info-item">
+                <i class="bi bi-envelope-fill"></i>
+                <span>vijaykumar@example.com</span>
+              </div>
+              <div class="info-item">
+                <i class="bi bi-telephone-fill"></i>
+                <span>+91 12345 67890</span>
+              </div>
+              <div class="info-item">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>Bengaluru, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="custom-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <div>© 2025 Vijay Kumar. All rights reserved.</div>
+      <div>Made with <span class="text-danger">❤️</span> by Vijay Kumar</div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" title="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- ==========================================================================
+       Project Detail Modal
+       ========================================================================== -->
+  <div class="modal fade" id="projectDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content dark-modal">
+        <div class="modal-header">
+          <div>
+            <span class="badge-tag mb-1" id="modalProjectBadge">Project Details</span>
+            <h4 class="modal-title fw-bold" id="modalProjectTitle">Project Title</h4>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-4 rounded-3 overflow-hidden" style="max-height: 280px; background: #000;">
+            <img id="modalProjectImg" src="" alt="Project Screenshot" class="w-100 h-100 object-fit-cover">
+          </div>
+          <h5 class="fw-bold mb-2">Overview</h5>
+          <p id="modalProjectSummary" class="text-muted mb-4"></p>
+
+          <h5 class="fw-bold mb-2">Key Highlights &amp; Features</h5>
+          <ul id="modalProjectHighlights" class="list-unstyled mb-4"></ul>
+
+          <h5 class="fw-bold mb-2">Technologies Used</h5>
+          <div id="modalProjectTags" class="d-flex flex-wrap gap-2 mb-2"></div>
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <button type="button" class="btn btn-glass" data-bs-dismiss="modal">Close</button>
+          <a id="modalProjectLiveLink" href="https://vk-store-chi.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-neon">
+            Visit Live Site <i class="bi bi-box-arrow-up-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Hire Me / Contact Modal
+       ========================================================================== -->
+  <div class="modal fade" id="hireModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content dark-modal">
+        <div class="modal-header">
+          <h4 class="modal-title fw-bold">Let's Connect</h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="contactForm">
+          <div class="modal-body">
+            <p class="text-muted small mb-3">Send a message directly to Vijay Kumar for hiring, internships, or collaborations.</p>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold">Your Name</label>
+              <input type="text" class="form-control dark-input" placeholder="e.g. Rahul Sharma" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold">Your Email</label>
+              <input type="email" class="form-control dark-input" placeholder="name@company.com" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold">Project Type / Opportunity</label>
+              <select class="form-select dark-input">
+                <option value="fulltime">Full-Time Software Engineer</option>
+                <option value="internship">Developer Internship</option>
+                <option value="freelance">Freelance / Custom Project</option>
+                <option value="other">General Discussion</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold">Your Message</label>
+              <textarea class="form-control dark-input" rows="4" placeholder="Tell me about your goals, project scope, or opportunity..." required></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-glass" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary-neon">Send Message <i class="bi bi-send-fill ms-1"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
